@@ -1,12 +1,18 @@
-import {Fragment} from "react";
+import {Fragment, useState} from "react";
 import {TabsHeaders} from "./tabs-headers.jsx";
-import {TabsContent} from "./tabs-content.jsx";
+import {Restaurant} from "../restaurant/restaurant.jsx";
 
-export const Tabs = ({restaurants, tabClickHandler, activeTab}) => {
+export const Tabs = ({restaurants}) => {
+    const [activeRestaurant, setActiveRestaurant] = useState(restaurants[0]);
+    const tabClickHandler = obj => setActiveRestaurant(obj);
     return(
         <Fragment>
-            <TabsHeaders restaurants = {restaurants} tabClickHandler={tabClickHandler} activeTab={activeTab} />
-            <TabsContent restaurants = {restaurants} activeTab={activeTab} />
+            <TabsHeaders restaurants = {restaurants} tabClickHandler = {tabClickHandler} activeRestaurant = {activeRestaurant} />
+            <div className="tabs-content">
+                <div className = "tabs-panel is-active">
+                    <Restaurant activeRestaurant = {activeRestaurant}/>
+                </div>
+            </div>
         </Fragment>
     );
 }

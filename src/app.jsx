@@ -3,16 +3,11 @@ import {Layout} from "./layout/layout.jsx";
 import {restaurants} from "../mockups/mock.js";
 import {Tabs} from "./tabs/tabs.jsx";
 export const App = () => {
-    const [activeTab, setActiveTab] = useState(0);
-    const tabClickHandler = num => setActiveTab(num);
+    console.clear();
     return (
         <Layout>
             <div className="cell">
-                <Tabs
-                    restaurants = {restaurants}
-                    activeTab = {activeTab}
-                    tabClickHandler = {tabClickHandler}
-                />
+                <Tabs restaurants = {restaurants} />
             </div>
         </Layout>
     );
