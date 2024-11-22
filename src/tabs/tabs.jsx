@@ -10,7 +10,7 @@ export const Tabs = ({restaurants}) => {
             <TabsHeaders restaurants = {restaurants} tabClickHandler = {tabClickHandler} activeRestaurant = {activeRestaurant} />
             <div className="tabs-content">
                 <div className = "tabs-panel is-active">
-                    <Restaurant activeRestaurant = {activeRestaurant}/>
+                    <Restaurant key = {activeRestaurant.id} activeRestaurant = {activeRestaurant} />
                 </div>
             </div>
         </Fragment>
