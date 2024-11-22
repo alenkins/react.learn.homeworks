@@ -15,8 +15,8 @@ export const ScrollProgress = () => {
         height: "100%",
         width: width + "%"
     }
+    const scrollHandler = () => setWidth(calcPosition);
     useEffect(() => {
-        const scrollHandler = () => setWidth(calcPosition);
         document.addEventListener('scroll', scrollHandler);
         return () => document.removeEventListener("scroll", scrollHandler);
     }, []);
