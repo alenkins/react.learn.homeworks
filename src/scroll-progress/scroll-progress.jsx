@@ -1,7 +1,6 @@
 import {useEffect, useState} from "react";
-
+const calcPosition = () => (document.documentElement.scrollTop * 100) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
 export const ScrollProgress = () => {
-    const calcPosition = () => (document.documentElement.scrollTop * 100) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
     const [width, setWidth] = useState(calcPosition);
     const wrapperStyle = {
         position: "fixed",
@@ -15,8 +14,8 @@ export const ScrollProgress = () => {
         height: "100%",
         width: width + "%"
     }
-    const scrollHandler = () => setWidth(calcPosition);
     useEffect(() => {
+        const scrollHandler = () => setWidth(calcPosition);
         document.addEventListener('scroll', scrollHandler);
         return () => document.removeEventListener("scroll", scrollHandler);
     }, []);
