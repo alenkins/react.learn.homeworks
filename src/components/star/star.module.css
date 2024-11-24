@@ -3,9 +3,9 @@
     margin-right: 8px;
     height: 15px;
     width: 15px;
-    background: url("images/star.svg");
+    background: url("/images/star.svg");
     background-size: contain;
 }
 .selectedStar {
-    background-image: url("images/selected-star.svg");
+    background-image: url("/images/selected-star.svg");
 }
