@@ -1,12 +1,9 @@
-import {useState} from "react";
-
-export const Counter = ({min, max}) => {
-    const [value, setValue] = useState(min);
+export const Counter = ({value, plusClickHandler, minusClickHandler, min, max}) => {
     const onPlusClickHandler = () => {
-        value < max && setValue(value + 1);
+        value < max && plusClickHandler(value + 1);
     }
     const onMinusClickHandler = () => {
-        value > min && setValue(value - 1);
+        value > min && minusClickHandler(value - 1);
     }
     return(
         <div className="input-group">
