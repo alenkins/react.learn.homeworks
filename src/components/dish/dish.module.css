@@ -3,11 +3,11 @@
     align-items: center;
     margin-bottom: 20px;
 }
-.dishImage {
+.dishImageWrapper {
     flex-shrink: 0;
     margin-right: 30px;
 }
-.dishImage img {
+.dishImage {
     height: 80px;
     width: 80px;
     object-fit: cover;
