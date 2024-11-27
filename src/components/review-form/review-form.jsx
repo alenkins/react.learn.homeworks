@@ -1,13 +1,14 @@
 import {useForm} from "./use-form.js";
 import {Counter} from "../counter/counter.jsx";
 import classNames from "classnames";
+import {Title} from "../title/title.jsx";
 import styles from "./review-form.module.css";
 export const ReviewForm = () => {
     const {form, setName, setText, setRating, resetForm} = useForm();
     const {name, text, rating} = form;
     return(
         <div className = {classNames(styles.form)}>
-            <h4 className = {classNames(styles.title)}>Оставить отзыв</h4>
+            <Title className={classNames(styles.title)} tagName = "h4">Оставить отзыв</Title>
             <form>
                 <div className = {classNames(styles.row)}>
                     <span className = {classNames(styles.label)}>Ваше имя</span>

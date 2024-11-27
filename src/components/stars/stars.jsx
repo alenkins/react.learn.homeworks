@@ -1,8 +1,5 @@
 import {Star} from "../star/star.jsx";
 export const Stars = ({value, count = 5}) => {
-    const stars = [];
-    for (let i = 0; i < count; i++) {
-        stars.push(<Star key = {i} value = {value} number = {i} />);
-    }
-    return stars;
+    const numbers = [...Array(count).keys()];
+    return numbers.map((num) => <Star key = {num} value = {value} number = {num} />);
 }

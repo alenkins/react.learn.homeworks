@@ -6,10 +6,3 @@ html,body {
     font-family: "Nunito", sans-serif;
     line-height: 1.6;
 }
-.container {
-    margin: auto;
-    max-width: 1200px;
-}
-h1, h2, h3, h4, h5, h6 {
-    font-family: "Roboto", sans-serif;
-}
