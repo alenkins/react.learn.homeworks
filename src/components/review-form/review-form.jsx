@@ -7,33 +7,33 @@ export const ReviewForm = () => {
     const {form, setName, setText, setRating, resetForm} = useForm();
     const {name, text, rating} = form;
     return(
-        <div className = {classNames(styles.form)}>
-            <Title className={classNames(styles.title)} tagName = "h4">Оставить отзыв</Title>
+        <div className = {styles.form}>
+            <Title className={styles.title} tagName = "h4">Оставить отзыв</Title>
             <form>
-                <div className = {classNames(styles.row)}>
-                    <span className = {classNames(styles.label)}>Ваше имя</span>
+                <div className = {styles.row}>
+                    <span className = {styles.label}>Ваше имя</span>
                     <input
-                        className = {classNames(styles.field)}
+                        className = {styles.field}
                         type = "text"
                         value = {name}
                         onChange = {event => setName(event.target.value)}
                     />
                 </div>
-                <div className = {classNames(styles.row)}>
-                    <span className = {classNames(styles.label)}>Отзыв</span>
+                <div className = {styles.row}>
+                    <span className = {styles.label}>Отзыв</span>
                     <textarea
-                        className = {classNames(styles.field)}
+                        className = {styles.field}
                         onChange = {event => setText(event.target.value)}
                         value = {text}
                     />
                 </div>
-                <div className = {classNames(styles.row)}>
-                    <span className = {classNames(styles.label)}>Рейтинг</span>
+                <div className = {styles.row}>
+                    <span className = {styles.label}>Рейтинг</span>
                     <Counter min = {1} max = {5} value = {rating} plusClickHandler = {setRating} minusClickHandler = {setRating} />
                 </div>
                 <div className = {classNames(styles.buttons, styles.row)}>
-                    <button type="button" className = {classNames(styles.button)}>Опубликовать</button>
-                    <button type="button" className = {classNames(styles.button)} onClick = {resetForm}>Сбросить форму</button>
+                    <button type="button" className = {styles.button}>Опубликовать</button>
+                    <button type="button" className = {styles.button} onClick = {resetForm}>Сбросить форму</button>
                 </div>
             </form>
         </div>

@@ -3,7 +3,7 @@ import styles from "./tabs.module.css";
 import {Container} from "../container/container.jsx";
 export const TabsHeaders = ({restaurants, tabClickHandler, activeRestaurant}) => {
     return(
-        <div className = {classNames(styles.tabs)}>
+        <div className = {styles.tabs}>
             <Container>
                 <ul>
                     {

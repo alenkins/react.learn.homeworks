@@ -1,5 +1,4 @@
 import {useEffect, useState} from "react";
-import classNames from "classnames";
 import styles from "./scroll-progress.module.css";
 const calcPosition = () => (document.documentElement.scrollTop * 100) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
 export const ScrollProgress = () => {
@@ -14,8 +13,8 @@ export const ScrollProgress = () => {
     }, []);
 
     return(
-        <div className = {classNames(styles.wrapper)}>
-            <div style = {progressStyle} className = {classNames(styles.progress)}></div>
+        <div className = {styles.wrapper}>
+            <div style = {progressStyle} className = {styles.progress}></div>
         </div>
     );
 }
