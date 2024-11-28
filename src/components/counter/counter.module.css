@@ -1,0 +1,26 @@
+.counter {
+    display: block;
+}
+.button {
+    display: inline-block;
+    padding: 0 15px;
+    height: 40px;
+    background-color: #c59d5f;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 40px;
+}
+.valueContainer {
+    display: inline-block;
+    padding: 0 15px;
+    height: 40px;
+    width: 40px;
+    background-color: #151a20;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    line-height: 40px;
+    text-align: center;
+}

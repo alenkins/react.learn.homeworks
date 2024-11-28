@@ -1,12 +1,13 @@
-import {Layout} from "./layout/layout.jsx";
+import {Layout} from "./components/layout/layout.jsx";
 import {restaurants} from "../mockups/mock.js";
-import {Tabs} from "./tabs/tabs.jsx";
+import {Tabs} from "./components/tabs/tabs.jsx";
+import "./styles/normalize.css";
+import "./styles/fonts.css";
+import "./styles/app.css";
 export const App = () => {
     return (
         <Layout>
-            <div className="cell">
-                <Tabs restaurants = {restaurants} />
-            </div>
+            <Tabs restaurants = {restaurants} />
         </Layout>
     );
 }

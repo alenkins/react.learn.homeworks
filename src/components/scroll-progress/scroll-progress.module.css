@@ -1,0 +1,12 @@
+.wrapper {
+    position: fixed;
+    height: 5px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+.progress {
+    background-color: #c59d5f;
+    height: 100%;
+}

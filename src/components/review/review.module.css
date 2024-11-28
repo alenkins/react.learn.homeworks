@@ -1,0 +1,25 @@
+.review {
+    padding: 20px;
+    height: 100%;
+}
+.reviewBlockquote {
+    display: block;
+    height: 100%;
+    padding-right: 15px;
+    background: url("/images/item-bg.jpg") center bottom no-repeat;
+}
+.reviewText {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 20px;
+    font-weight: 600;
+    font-style: italic;
+    margin-bottom: 33px;
+}
+.reviewAuthor {
+    display: block;
+    font-style: normal;
+    color: rgba(255, 255, 255, 0.6);
+}
+.rating {
+    margin-bottom: 15px;
+}

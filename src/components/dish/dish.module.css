@@ -1,0 +1,50 @@
+.dish {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.dishImageWrapper {
+    flex-shrink: 0;
+    margin-right: 30px;
+}
+.dishImage {
+    height: 80px;
+    width: 80px;
+    object-fit: cover;
+    border: 2px solid #fff;
+    border-radius: 50%;
+}
+.dishInfo {
+    width: 100%;
+}
+.dishHead {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+.dishHead:after {
+    content: '';
+    position: absolute;
+    border-bottom: 1px dashed #c59d5f;
+    height: 1px;
+    top: 20px;
+    left: 150px;
+    right: 50px;
+    z-index: 0;
+}
+.dishTitle {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding-right: 10px;
+    z-index: 1;
+}
+.dishPrice {
+    font-size: 20px;
+    padding-left: 10px;
+    z-index: 1;
+}
+.dishDescription {
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 16px;
+}
