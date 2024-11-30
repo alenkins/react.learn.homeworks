@@ -35,13 +35,9 @@
 }
 .button {
     display: block;
-    color: #fff;
-    cursor: pointer;
     font-size: 16px;
     font-weight: 600;
     text-transform: uppercase;
     padding: 14px 45px;
-    background-color: #c59d5f;
-    border: none;
     border-radius: 2px;
 }
