@@ -8,9 +8,9 @@ import {useAuth} from "../auth-context/use-auth.js";
 export const ReviewForm = () => {
     const {form, setName, setText, setRating, resetForm} = useForm();
     const {name, text, rating} = form;
-    const {isAuth} = useAuth();
+    const {auth} = useAuth();
     return(
-        isAuth &&
+        auth.isAuth &&
         <div className = {styles.form}>
             <Title className={styles.title} tagName = "h4">Оставить отзыв</Title>
             <form>

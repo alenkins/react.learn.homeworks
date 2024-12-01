@@ -4,7 +4,7 @@ import styles from "./dish.module.css";
 import {useAuth} from "../auth-context/use-auth.js";
 
 export const Dish = ({dish}) => {
-    const {isAuth} = useAuth();
+    const {auth} = useAuth();
     const [value, setValue] = useState(0);
     return(
         <>
@@ -23,7 +23,7 @@ export const Dish = ({dish}) => {
                 </div>
             </div>
             <div>
-                {isAuth && <Counter min = {0} max = {5} plusClickHandler = {setValue} minusClickHandler = {setValue} value = {value} />}
+                {auth.isAuth && <Counter min = {0} max = {5} plusClickHandler = {setValue} minusClickHandler = {setValue} value = {value} />}
             </div>
         </>
     );
