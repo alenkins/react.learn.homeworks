@@ -1,15 +1,38 @@
 import {useState} from "react";
-import {TabsHeaders} from "./tabs-headers.jsx";
-import {Restaurant} from "../restaurant/restaurant.jsx";
 import {Container} from "../container/container.jsx";
-export const Tabs = ({restaurants}) => {
-    const [activeRestaurant, setActiveRestaurant] = useState(restaurants[0]);
-    const tabClickHandler = obj => setActiveRestaurant(obj);
+import {RestaurantContainer} from "../restaurant/restaurant-container.jsx";
+import {TabsHeadersContainer} from "./tabs-headers/tabs-headers-container.jsx";
+import classNames from "classnames";
+import styles from "./tabs.module.css";
+export const Tabs = ({restaurantsIds}) => {
+    const [activeRestaurantId, setActiveRestaurantId] = useState(restaurantsIds[0]);
+
+    const tabClickHandler = id => {
+        setActiveRestaurantId(id);
+    };
     return(
         <>
-            <TabsHeaders restaurants = {restaurants} tabClickHandler = {tabClickHandler} activeRestaurant = {activeRestaurant} />
+            <div className = {styles.tabs}>
+                <Container>
+                    <ul>
+                        {
+                            restaurantsIds.map(id => {
+                                return (
+                                    <TabsHeadersContainer
+                                        key = {id}
+                                        isActive = {activeRestaurantId === id}
+                                        id = {id}
+                                        tabClickHandler = {tabClickHandler}
+                                        className = {classNames(styles.tabsTitle)}
+                                    />
+                                )
+                            })
+                        }
+                    </ul>
+                </Container>
+            </div>
             <Container>
-                <Restaurant key = {activeRestaurant.id} activeRestaurant = {activeRestaurant} />
+                <RestaurantContainer activeRestaurantId = {activeRestaurantId} />
             </Container>
         </>
     );
