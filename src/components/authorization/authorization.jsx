@@ -4,7 +4,12 @@ import styles from "./authorization.module.css";
 
 export const Authorization = () => {
     const {auth, toggleAuth} = useAuth();
-    return auth.isAuth
-        ? <><Button onClick = {() => toggleAuth()} className = {styles.button}>Выйти</Button><div>Привет, {auth.name} </div></>
-        : <><Button onClick = {() => toggleAuth()} className={styles.button}>Войти</Button><div>Вы не авторизованы </div></>;
+    const welcomeText = auth.isAuth ? `Привет, ${auth.name}` : "Вы не авторизованы";
+    const authText = auth.isAuth ? "Выйти" : "Войти";
+    return (
+        <>
+            <Button onClick = {() => toggleAuth()} className = {styles.button}>{authText}</Button>
+            <div>{welcomeText}</div>
+        </>
+    );
 }

@@ -4,13 +4,10 @@ import classNames from "classnames";
 import {Title} from "../title/title.jsx";
 import styles from "./review-form.module.css";
 import {Button} from "../button/button.jsx";
-import {useAuth} from "../auth-context/use-auth.js";
 export const ReviewForm = () => {
     const {form, setName, setText, setRating, resetForm} = useForm();
     const {name, text, rating} = form;
-    const {auth} = useAuth();
     return(
-        auth.isAuth &&
         <div className = {styles.form}>
             <Title className={styles.title} tagName = "h4">Оставить отзыв</Title>
             <form>
