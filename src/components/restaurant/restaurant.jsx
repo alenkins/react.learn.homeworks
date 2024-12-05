@@ -10,8 +10,8 @@ export const Restaurant = ({activeRestaurant}) => {
     return(
         <>
             <Title tagName = 'h2' className = {styles.restaurantTitle}>{activeRestaurant.name}</Title>
-            <Menu dishes = {activeRestaurant.menu} />
-            <Reviews reviews = {activeRestaurant.reviews} />
+            <Menu dishesIds = {activeRestaurant.menu} />
+            <Reviews reviewsIds = {activeRestaurant.reviews} />
             { auth.isAuth && <ReviewForm /> }
         </>
     );
