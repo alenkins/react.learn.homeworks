@@ -3,6 +3,7 @@ import {Counter} from "../counter/counter.jsx";
 import classNames from "classnames";
 import {Title} from "../title/title.jsx";
 import styles from "./review-form.module.css";
+import {Button} from "../button/button.jsx";
 export const ReviewForm = () => {
     const {form, setName, setText, setRating, resetForm} = useForm();
     const {name, text, rating} = form;
@@ -32,8 +33,8 @@ export const ReviewForm = () => {
                     <Counter min = {1} max = {5} value = {rating} plusClickHandler = {setRating} minusClickHandler = {setRating} />
                 </div>
                 <div className = {classNames(styles.buttons, styles.row)}>
-                    <button type="button" className = {styles.button}>Опубликовать</button>
-                    <button type="button" className = {styles.button} onClick = {resetForm}>Сбросить форму</button>
+                    <Button type="button" className = {styles.button}>Опубликовать</Button>
+                    <Button type="button" className = {styles.button} onClick = {resetForm}>Сбросить форму</Button>
                 </div>
             </form>
         </div>

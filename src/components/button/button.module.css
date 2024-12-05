@@ -1,0 +1,16 @@
+.button {
+    display: block;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border: none;
+}
+.light {
+    background-color: #fff;
+    color: #000;
+}
+.dark {
+    background-color: #c59d5f;
+    color: #fff;
+}

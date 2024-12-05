@@ -1,4 +1,5 @@
 import styles from "./counter.module.css";
+import {Button} from "../button/button.jsx";
 export const Counter = ({value, plusClickHandler, minusClickHandler, min, max}) => {
     const onPlusClickHandler = () => {
         value < max && plusClickHandler(value + 1);
@@ -8,9 +9,9 @@ export const Counter = ({value, plusClickHandler, minusClickHandler, min, max}) 
     }
     return(
         <div className = {styles.counter}>
-            <button className = {styles.button} onClick={onPlusClickHandler}>+</button>
+            <Button onClick = {onPlusClickHandler} className = {styles.button}>+</Button>
             <input className = {styles.valueContainer} readOnly = {true} value = {value} />
-            <button className = {styles.button} onClick = {onMinusClickHandler}>-</button>
+            <Button onClick = {onMinusClickHandler} className = {styles.button}>-</Button>
         </div>
     );
 }
