@@ -9,9 +9,6 @@ export const Dish = ({dish}) => {
     return(
         <>
             <div className = {styles.dish}>
-                <div className = {styles.dishImageWrapper}>
-                    <img alt = {dish.name + ' photo'} src = {dish.thumb} className = {styles.dishImage} />
-                </div>
                 <div className = {styles.dishInfo}>
                     <div className = {styles.dishHead}>
                         <div className = {styles.dishTitle}>{dish.name}</div>

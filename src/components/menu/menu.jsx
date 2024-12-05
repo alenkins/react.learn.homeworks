@@ -1,10 +1,10 @@
-import {Dish} from "../dish/dish.jsx";
 import styles from "./menu.module.css";
-export const Menu = ({dishes}) => {
+import {DishContainer} from "../dish/dish-container.jsx";
+export const Menu = ({dishesIds}) => {
     return(
         <div className = {styles.menu}>
             {
-                dishes.map((dish) => <div key = {dish.id} className = {styles.menuDish}><Dish dish = {dish} /></div>)
+                dishesIds.map((dishId) => <div key = {dishId} className = {styles.menuDish}><DishContainer dishId = {dishId} /></div>)
             }
         </div>
     );
